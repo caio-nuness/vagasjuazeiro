@@ -14,7 +14,9 @@ export const Vacancie = model('Vacancie', new Schema({
 
   status: {
     type: String,
-    required: true
+    required: true,
+    enum: ['ATIVA', 'CONGELADA'],
+    default: 'ATIVA'
   },
 
   imagePath: {
@@ -47,11 +49,6 @@ export const Vacancie = model('Vacancie', new Schema({
     required: true
   },
 
-  createdAt: {
-    type: Date,
-    required: true
-  },
-
   enterprise: {
     type: Schema.Types.ObjectId,
     required: true,
@@ -62,5 +59,11 @@ export const Vacancie = model('Vacancie', new Schema({
     type: Schema.Types.ObjectId,
     required: false,
     ref: 'User',
-  }
+  },
+
+  createdAt: {
+    type: Date,
+    required: true,
+    default: Date.now
+  },
 }));

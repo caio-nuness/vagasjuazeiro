@@ -16,6 +16,7 @@ export const Favorite = model('Favorite', new Schema({
 
   createdAt: {
     type: Date,
-    required: true
+    required: true,
+    default: Date.now
   },
 }));

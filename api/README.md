@@ -59,3 +59,5 @@ yarn add -D @types/node
 
 `docker run --name mongo -p 27017:27017 -d mongo`
 
+parei em 01:17:30
+

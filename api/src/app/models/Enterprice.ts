@@ -26,8 +26,11 @@ export const Enterprise = model('Enterprise', new Schema({
 
   // Colocar um enum aqui comas as opções sim e não
   is_hiring: {
-    type: Boolean,
-    required: true
+    type: String,
+
+    required: true,
+    enum: ['SIM', 'NÃO'],
+    default: 'SIM'
   },
 
   imagePath: {
@@ -54,6 +57,7 @@ export const Enterprise = model('Enterprise', new Schema({
 
   createdAt: {
     type: Date,
-    required: true
+    required: true,
+    default: Date.now
   },
 }));
