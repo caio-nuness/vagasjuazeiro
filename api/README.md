@@ -55,7 +55,7 @@ yarn add -D @types/express
 yarn add -D @types/node
 ```
 
-## CONFIGURAÇÃO MONGODB NO DOCKER
+## CONFIGS DOCKER / MONGODB
 
 `docker run --name mongo -p 27017:27017 -d mongo`
 
